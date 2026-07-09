@@ -1,12 +1,12 @@
 :root {
-  --background: #ffffff;
+  --background: #f8fafc;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f8fafc;
+    --foreground: #171717;
   }
 }
 
@@ -29,6 +29,61 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.app-layout {
+  min-height: 100vh;
+}
+
+.app-main {
+  min-height: 100vh;
+  padding-left: 76px;
+  transition: padding-left 180ms ease;
+}
+
+.sidebar:hover + .app-main {
+  padding-left: 248px;
+}
+
+.topbar,
+.app-content {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.app-content {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.page-shell {
+  min-height: calc(100vh - 136px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 28px;
+  background: #ffffff;
+  padding: 32px;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.06);
+}
+
+.eyebrow {
+  margin-bottom: 8px;
+  color: #14b8a6;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.page-shell h1 {
+  margin-bottom: 10px;
+  color: #0f172a;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1;
+}
+
+.page-description {
+  color: #64748b;
+  font-size: 1rem;
 }
 
 * {
